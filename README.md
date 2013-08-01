@@ -14,20 +14,20 @@
 
 
 
-#How to use (currently OpensStack only)
+#How to use (currently OpenStack only)
 
 1) Source into your system the variables EC2_ACCESS_KEY, EC2_SECRET_KEY and EC2_URL.
-2) run from bash: $python EC2_TestSuite.py flavor=Openstack ImageId=*yourimage*
+2) run from bash: $python ec2_testsuite.py flavor=OpenStack 
+ImageId=*yourimage*
 
-Note: There are several dependencies but there will be a setup.py soon and it will be clarified!
 
 #Big TODO (5 stuff at the time)
 
-* Write setup.py and manage dependencies.
-* Write proper documentation.
-* Write Reporter functionality function.
-* Fully support the basic commands (many instances, filters etc.)
-* Manage all configuration
+* Write setup.py and manage dependencies and packages.
+* Make command line robust and extensible. Support --debug .
+* Logger. (out, err).
+* Write Reporter functionality (with tables etc.).
+* Manage all configuration. If not in ini file, THEN on the command line
 
 #License
 
