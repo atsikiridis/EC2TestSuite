@@ -16,18 +16,24 @@
 
 #How to use (currently OpenStack only)
 
-1) Source into your system the variables EC2_ACCESS_KEY, EC2_SECRET_KEY and EC2_URL.
-2) run from bash: $python ec2_testsuite.py flavor=OpenStack 
-ImageId=*yourimage*
+
+1) Source into your system the variables EC2_ACCESS_KEY, EC2_SECRET_KEY and 
+   EC2_URL. (in next versions they will be included in conf file. For now, 
+   system variables)
+2) $ sudo python setup.py install
+3) Install prettytable in your preferred way.
+4) $ec2test -f openstack -i *yourimage*
+
+--debug flag is functional for further debugging. 
 
 
 #Big TODO (5 stuff at the time)
 
-* Write setup.py and manage dependencies and packages.
-* Make command line robust and extensible. Support --debug .
-* Logger. (out, err).
-* Write Reporter functionality (with tables etc.).
-* Manage all configuration. If not in ini file, THEN on the command line
+* More Info if image is invalid.
+* Create real xmls, not <code>0</code> toy.
+* Manage all configuration. If not in ini file, THEN on the command line.
+* Fully support basic commands (filters, flavors).
+* Write unit tests.
 
 #License
 

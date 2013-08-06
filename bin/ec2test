@@ -1,0 +1,9 @@
+#!/usr/bin/python -tt
+
+"""The main executable"""
+
+import testsuite.ec2_testsuite
+import sys
+
+if __name__ == '__main__':
+    testsuite.ec2_testsuite.Ec2TestSuite().run()
