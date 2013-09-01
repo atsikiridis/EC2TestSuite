@@ -37,7 +37,7 @@
 
 #License
 
-This project is under "Do whatever you want" MIT License => http://www.tldrlegal.com/license/mit-license
+This project is under GPL version 3 License => http://www.tldrlegal.com/license/gnu-general-public-license-v3-%28gpl-3%29
 
 However, all the other Open source frameworks/technologies used in this project come with their own respective licenses.
 

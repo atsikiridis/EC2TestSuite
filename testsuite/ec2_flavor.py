@@ -1,3 +1,19 @@
+#Copyright (C) 2013 CERN
+#
+#    Author: Artem Tsikiridis <artem.tsikiridis@cern.ch>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License version 3, as
+#    published by the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """Module providing an abstract class of an EC2 Flavor and classes to
    prepare a valid request."""
 
@@ -74,6 +90,11 @@ class Ec2Flavor(object):
         args_to_sign.append('InstanceId.1='+instanceid)
         return self.Ec2Signer.sign_request(self.ec2_params, args_to_sign)
 
+    def httpreq_describe_images(self):
+        """Gets a valid and signed request to describe images."""
+        args_to_sign = list()
+        args_to_sign.append('Action=DescribeImages')
+        return self.Ec2Signer.sign_request(self.ec2_params, args_to_sign)
 
     @classmethod
     def __subclasshook__(cls, C):
